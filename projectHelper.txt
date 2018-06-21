@@ -1,3 +1,7 @@
 to start mongo db use ----->
 
 "C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe" --dbpath "D:\SOFTWARES\MONGO DB\data\db"
+
+
+
+"C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe" --dbpath "D:\MONGO_DB\data\newdb"

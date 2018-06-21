@@ -27,7 +27,7 @@ exports.createItem = async function (item) {
 
   try {
 
-    // Saving the Todo 
+    // Saving the item
     var savedItem = await newItem.save()
 
     return savedItem;
@@ -39,24 +39,23 @@ exports.createItem = async function (item) {
 }
 
 exports.updateItem = async function (item) {
-  var id = item.id
+  var id = item.id ;
 
   try {
-    //Find the old Todo Object by the Id
 
     var oldItem = await Item.findById(id);
   } catch (e) {
     throw Error(e);
   }
 
-  // If no old Todo Object exists return false
-  if (!oldTodo) {
+  if (!oldItem) {
     return false;
   }
 
-  oldItem.name = item.name
-  oldItem.description = item.description
-  oldItem.type = item.type
+  oldItem.name = item.name;
+  oldItem.description = item.description;
+  oldItem.type = item.type;
+  oldItem.dateAdded = item.dateAdded;
 
 
   try {
@@ -69,15 +68,15 @@ exports.updateItem = async function (item) {
 
 exports.deleteItem = async function (id) {
 
-  // Delete the Todo
+  // Delete the Item
   try {
-    var deleted = await Item.remove({ _id: id })
-    if (deleted.result.n === 0) {
-      throw Error("Item Could not be deleted")
+    var deleted = await Item.remove({ _id: id });
+    if (deleted.n !== 0 && deleted.ok !== 1) {
+      throw Error("Item Could not be deleted");
     }
-    return deleted
+    return deleted;
   } catch (e) {
-    throw Error(e)
+    throw Error(e);
   }
 }
 

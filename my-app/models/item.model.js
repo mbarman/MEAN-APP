@@ -4,7 +4,7 @@ var mongoose_paginate = require('mongoose-paginate');
 var itemSchema = new mongoose.Schema({
   name: String,
   type: String,
-  description: string,
+  description: String,
   dateAdded: Date
 });
 

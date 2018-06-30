@@ -10,7 +10,7 @@ var itemSchema = new mongoose.Schema({
 
 itemSchema.plugin(mongoose_paginate);
 
-const Item = mongoose.model('Item', itemSchema)
+const Item = mongoose.model('Item', itemSchema);
 
 module.exports = Item;
 

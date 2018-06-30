@@ -28,12 +28,12 @@ exports.createItem = async function (item) {
   try {
 
     // Saving the item
-    var savedItem = await newItem.save()
+    var savedItem = await newItem.save();
 
     return savedItem;
   } catch (err) {
 
-    // return a Error message describing the reason     
+    // return a Error message describing the reason
     throw Error(err)
   }
 }

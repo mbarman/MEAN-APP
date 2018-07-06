@@ -1,21 +1,42 @@
-<ul>
-    <li>
-        <a href=''>View Ingest History</a>
-    </li>
-    <li>
-        <a href=''>Connection List</a>
-    </li>
-    <li>
-        <a href=''>Define Connection</a>
-    </li>
-    <li>
-        <a href=''>Define File Ingest</a>
-    </li>
-    <li>
-        <a href=''>Define Streaming Ingest</a>
-    </li>
-    <li>
-        <a href=''>Automated Inventory</a>
-    </li>
-</ul>
+<div>
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Logo</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]='["/admin"]'>Admin</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]='["/admin/students"]'>Admin</a>
+        </li>
+
+        <!-- Dropdown -->
+        <li class="nav-item active dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Dropdown link
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+            <a class="dropdown-item" href="#">Link 3</a>
+          </div>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <a class="nav-link" [routerLink]='["/login"]'><b>Sign Out</b></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
 <router-outlet></router-outlet>

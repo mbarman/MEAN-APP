@@ -1,5 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import '~bootstrap/dist/css/bootstrap-reboot.css';
 @import '~bootstrap/dist/css/bootstrap.css';
 @import '~bootstrap/dist/css/bootstrap-grid.css';
 @import "~font-awesome/css/font-awesome.css";
+.main-class {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+d-table {
+    display: table;
+}
+
+d-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}

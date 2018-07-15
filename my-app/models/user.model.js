@@ -1,16 +1,18 @@
 var mongoose = require('mongoose');
+var mongoosePaginate = require('mongoose-paginate');
 
-var itemSchema = new mongoose.Schema({
+var userSchema = new mongoose.Schema({
     name: String,
-    type: String,
-    description: String,
+    email: String,
+    category: String,
+    userId: String,
+    password: String,
     dateAdded: Date
 });
 
-itemSchema.plugin(mongoose_paginate);
+userSchema.plugin(mongoosePaginate);
+const User = mongoose.model('User', userSchema);
 
-const Item = mongoose.model('Item', itemSchema);
-
-module.exports = Item;
+module.exports = User;
 
 //OR  module.exports = mongoose.model('Item', itemSchema);

@@ -10,6 +10,7 @@ import { HomeLayoutComponent } from './home/home-layout/home-layout.component';
 import { HomeComponent } from './home/home/home.component';
 import { AppRoutingModule } from './app.routing/app.routing.module';
 import { RegisterComponent } from './login/register/register.component';
+import { HttpModule } from '../../node_modules/@angular/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RegisterComponent } from './login/register/register.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -18,13 +18,18 @@ export class UrlService {
   };
 
   private getBaseUrl(): string {
-    return this.window.nativeWindow.location.protocol + '//' +
-           this.window.nativeWindow.location.host;
+    return this.window.nativeWindow.location.protocol + '//' + this.window.nativeWindow.location.host;
   }
 
   public getUrl(key): string {
    let _url = '';
-   _url = this.getBaseUrl() + this.urlObject[key];
+  /*  for (var p in obj) {
+    if( obj.hasOwnProperty(p) ) {
+      result += p + " , " + obj[p] + "\n";
+    }
+  }
+  return result; */
+   _url = this.getBaseUrl() + this.urlObject.admin.register;
    console.log(_url);
     return _url;
   }

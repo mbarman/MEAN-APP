@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { RegisterUserService } from '../../service/register/register-user.service';
+import { NgxNotificationService } from 'ngx-notification';
 
 @Component({
   selector: 'app-register',
@@ -9,7 +10,11 @@ import { RegisterUserService } from '../../service/register/register-user.servic
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private _router: Router, private userService: RegisterUserService) { }
+  constructor(private _router: Router,
+    private userService: RegisterUserService,
+    private ngxNotificationService: NgxNotificationService) {}
+
+
   public userName: string;
   public userEmail: string;
   public userCategory: string;
@@ -20,7 +25,7 @@ export class RegisterComponent implements OnInit {
   }
 
   registerMe() {
-    let  user: any = {};
+    const  user: any = {};
     user.name = this.userName;
     user.email = this.userEmail;
     user.category = this.userCategory;
@@ -35,6 +40,7 @@ export class RegisterComponent implements OnInit {
   }
 
   private handleSuccess(response: any) {
+    this.ngxNotificationService.sendMessage(response.message, 'success', 'bottom-right');
     this.signMeUp();
   }
 

@@ -9,8 +9,8 @@ export class UrlService {
   constructor(private window: WindowService) { }
 
   private urlObject: Object = {
-    'admin.register' : '/api/admin/register',
-    'user.login' : '/api/user/login'
+    'admin.register': '/api/admin/register',
+    'user.login': '/api/user/login'
   };
 
   private getBaseUrl(): string {
@@ -20,7 +20,6 @@ export class UrlService {
   public getUrl(key): string {
    let _url = '';
    _url = this.getBaseUrl() + this.urlObject[key];
-   console.log(_url);
     return _url;
   }
 }

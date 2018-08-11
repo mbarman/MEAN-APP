@@ -20,7 +20,32 @@ export class LoginComponent implements OnInit {
   }
 
   logMeIn() {
-   this._router.navigate(['/']);
+    const  user: any = {};
+    user.userId = this.userId;
+    user.password = this.userPassword;
+
+    this.userService.signMeIn(user).subscribe(
+      (response) => this.handleSuccess(response),
+      (error) => this.handleError(error)
+    );
+  }
+
+  private handleSuccess(response: any) {
+    if (response.status === 201) {
+      this.logIn();
+    }
+     else {
+      this.ngxNotificationService.sendMessage(response.message, 'danger', 'bottom-right');
+    }
+  }
+
+  private handleError(error: any) {
+    alert(error);
+  }
+
+
+  private logIn(){
+    this._router.navigate(['/']);
   }
 
 }

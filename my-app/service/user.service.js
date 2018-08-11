@@ -1,7 +1,7 @@
 var userModel = require('./../models/user.model');
 
 module.exports = {
-    registerMeService: async function (user){
+    registerMeService: async function(user) {
 
         var newUser = new userModel({
             name: user.name,
@@ -19,17 +19,15 @@ module.exports = {
             throw Error(error);
         }
     },
-    logInService: async function(user){
-        try{
-         var  tempUser = '';
-         userModel.find({'userId': user.userId},function(err,docs){
-            tempUser = docs ;
-            return tempUser ;
-        })
-        }
-        catch(err){
+    logInService: async function(user) {
+        try {
+            var loginuser = await userModel.findOne({ 'userId': user.userId }, 'password', function(err, docs) {
+                return docs;
+            })
+            return loginuser;
+        } catch (err) {
             throw Error(error);
         }
-       
+
     }
 }

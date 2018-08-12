@@ -1,16 +1,17 @@
+import { CustomHttpService } from './../http/custom-http.service';
 import { UrlService } from './../url/url.service';
 import { map, catchError } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 // import { Response, Headers, RequestOptions } from '@angular/http';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  constructor(private urlService: UrlService, private http: HttpClient) { }
+  constructor(private urlService: UrlService, private http: CustomHttpService) { }
 
   signMeIn(user: any): Observable<any> {
    // const headers: Headers = new Headers({ 'Content-Type': 'application/json' });

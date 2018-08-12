@@ -11,7 +11,9 @@ import { HomeLayoutComponent } from './home/home-layout/home-layout.component';
 import { HomeComponent } from './home/home/home.component';
 import { AppRoutingModule } from './app.routing/app.routing.module';
 import { RegisterComponent } from './login/register/register.component';
-import { HttpModule } from '../../node_modules/@angular/http';
+// import { HttpModule } from '../../node_modules/@angular/http';
+import {HttpClientModule } from '../../node_modules/@angular/common/http';
+import { NgHttpLoaderModule } from '../../node_modules/ng-http-loader';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { HttpModule } from '../../node_modules/@angular/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpModule
+    HttpClientModule,
+    NgHttpLoaderModule
+    // HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

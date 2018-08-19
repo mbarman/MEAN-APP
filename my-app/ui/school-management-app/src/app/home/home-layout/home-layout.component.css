@@ -1,0 +1,19 @@
+.page-header{
+  height: 50px;
+  background-color: teal;
+  position: inherit;
+}
+
+.div-inline{
+  display: inline-block;
+}
+
+.sign-out{
+  position: absolute;
+  right: 10px;
+}
+
+.sign-out a{
+  color: aliceblue;
+}
+

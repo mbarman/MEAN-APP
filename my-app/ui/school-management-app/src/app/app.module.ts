@@ -14,6 +14,8 @@ import { RegisterComponent } from './login/register/register.component';
 // import { HttpModule } from '../../node_modules/@angular/http';
 import {HttpClientModule } from '../../node_modules/@angular/common/http';
 import { NgHttpLoaderModule } from '../../node_modules/ng-http-loader';
+import { MaterialModule } from './material/material/material.module';
+import { MenuComponent } from './home/menu/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { NgHttpLoaderModule } from '../../node_modules/ng-http-loader';
     HomeLayoutComponent,
     HomeComponent,
     RegisterComponent,
-    NgxNotificationComponent
+    NgxNotificationComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import { NgHttpLoaderModule } from '../../node_modules/ng-http-loader';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    NgHttpLoaderModule
+    NgHttpLoaderModule,
+    MaterialModule
     // HttpModule
   ],
   providers: [],

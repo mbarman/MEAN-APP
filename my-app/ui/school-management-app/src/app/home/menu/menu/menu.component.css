@@ -1,0 +1,18 @@
+.main-menu{
+  cursor: pointer;
+    font-weight: bold;
+    color: white;
+    margin: 10px;
+}
+
+.main-menu a{
+  text-decoration: none;
+}
+
+
+
+.main-menu a:hover
+{
+   text-decoration:none;
+   cursor:pointer;
+}

@@ -1,14 +1,14 @@
-<div>
-  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-    <!-- Brand -->
+<div class="page-header">
+ <!--  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+
     <a class="navbar-brand" href="#">Logo</a>
 
-    <!-- Toggler/collapsibe Button -->
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Links -->
+
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -18,7 +18,7 @@
           <a class="nav-link" [routerLink]='["/admin/students"]'>Admin</a>
         </li>
 
-        <!-- Dropdown -->
+
         <li class="nav-item active dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
             Dropdown link
@@ -36,7 +36,18 @@
         </li>
       </ul>
     </div>
-  </nav>
+  </nav> -->
+
+
+<div class="div-inline">
+ <app-menu></app-menu>
+</div>
+
+<div class="div-inline sign-out">
+  <a class="nav-link" [routerLink]='["/login"]'><b>Sign Out</b></a>
+</div>
+
+
 </div>
 
 <router-outlet></router-outlet>

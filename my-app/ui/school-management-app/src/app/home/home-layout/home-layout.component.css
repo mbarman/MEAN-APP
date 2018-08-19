@@ -4,6 +4,10 @@
   position: inherit;
 }
 
+.main-padding{
+  padding: 10px;
+}
+
 .div-inline{
   display: inline-block;
 }

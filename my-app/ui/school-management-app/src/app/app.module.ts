@@ -16,6 +16,7 @@ import {HttpClientModule } from '../../node_modules/@angular/common/http';
 import { NgHttpLoaderModule } from '../../node_modules/ng-http-loader';
 import { MaterialModule } from './material/material/material.module';
 import { MenuComponent } from './home/menu/menu/menu.component';
+// import { FileSelectDirective } from '../../node_modules/ng2-file-upload';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { MenuComponent } from './home/menu/menu/menu.component';
     RegisterComponent,
     NgxNotificationComponent,
     MenuComponent
+    // FileSelectDirective
   ],
   imports: [
     BrowserModule,

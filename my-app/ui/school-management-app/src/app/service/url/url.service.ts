@@ -10,7 +10,8 @@ export class UrlService {
 
   private urlObject: Object = {
     'admin.register': '/api/admin/register',
-    'user.login': '/api/admin/login'
+    'user.login': '/api/admin/login',
+    'admin.upload': '/api/admin/upload'
   };
 
   private getBaseUrl(): string {
